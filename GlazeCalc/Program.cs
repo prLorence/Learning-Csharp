@@ -23,33 +23,33 @@ namespace GlazeCalc
             if (width < MIN_WIDTH)
             {
                 Console.WriteLine("Width is too small just like your pee pee. \n \n");
-                Console.WriteLine("Using minimum");
+                Console.WriteLine("Using minimum width \n");
                 width = MIN_WIDTH;
             }
 
             if (width > MAX_WIDTH)
             {
                 Console.WriteLine("Width is too large, it won't fit. \n \n");
-                Console.WriteLine("Using maximum");
+                Console.WriteLine("Using maximum width \n");
                 width = MAX_WIDTH;
             }
 
             // asks for the height of the window
-            Console.WriteLine("Enter the height of the window: ");
+            Console.Write("Enter the height of the window: ");
             heightString = Console.ReadLine();
             height = double.Parse(heightString);
 
             if (height < MIN_HEIGHT)
             {
                 Console.WriteLine("Height is too small uwu. \n \n");
-                Console.WriteLine("Using minimum height");
+                Console.WriteLine("Using minimum height \n");
                 height = MIN_HEIGHT;
             }
 
             if (height > MIN_HEIGHT)
             {
                 Console.WriteLine("Height is too large. \n \n");
-                Console.WriteLine("Using maximum");
+                Console.WriteLine("Using maximum height \n");
                 height = MAX_HEIGHT;
             }
 
@@ -60,6 +60,8 @@ namespace GlazeCalc
             Console.WriteLine("The length of the wood is " + woodLength + " feet");
 
             Console.WriteLine("The area of the glass is " + glassArea + " square meters");
+
+            Console.ReadLine();
         }
     }
 }
