@@ -15,7 +15,8 @@ namespace GlazeCalc
 
             string widthString, heightString;
 
-            Console.Write("Give the width of the window: ");
+            // asks for the width of the window
+            Console.Write("Enter the width of the window: ");
             widthString = Console.ReadLine();
             width = double.Parse(widthString);
 
@@ -31,10 +32,26 @@ namespace GlazeCalc
                 Console.WriteLine("Width is too large, it won't fit. \n \n");
                 Console.WriteLine("Using maximum");
                 width = MAX_WIDTH;
-            } 
+            }
 
+            // asks for the height of the window
+            Console.WriteLine("Enter the height of the window: ");
             heightString = Console.ReadLine();
             height = double.Parse(heightString);
+
+            if (height < MIN_HEIGHT)
+            {
+                Console.WriteLine("Height is too small uwu. \n \n");
+                Console.WriteLine("Using minimum height");
+                height = MIN_HEIGHT;
+            }
+
+            if (height > MIN_HEIGHT)
+            {
+                Console.WriteLine("Height is too large. \n \n");
+                Console.WriteLine("Using maximum");
+                height = MAX_HEIGHT;
+            }
 
             woodLength = 2 * (width + height) * 3.25;
 
